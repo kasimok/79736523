@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "iOS Video Thumbnail Demo",
+    "slug": "ios-video-thumbnail-demo",
+    "version": "1.0.0",
+    "sdkVersion": "53.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to read and generate thumbnails from videos.",
+        "NSPhotoLibraryAddUsageDescription": "This app needs access to photo library to save thumbnails."
+      }
+    },
+    "android": {
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_VIDEO"
+      ]
+    },
+    "web": {},
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
+  }
+}
